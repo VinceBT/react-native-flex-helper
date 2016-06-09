@@ -5,7 +5,7 @@
 
 import { StyleSheet } from 'react-native';
 
-export default Styles = StyleSheet.create({
+export default FlexHelper = StyleSheet.create({
   fill: {
     flex: 1
   },
