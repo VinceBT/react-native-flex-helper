@@ -1,9 +1,12 @@
 # React Native Flex Helper
 
-## What is this for ?
-With coding with React Native for a good amount of time now, I realized that the most lines I type are the style ones and specifically the flex ones.
+A simpler use for flexbox styles in React Native
 
-I have made a component for you to simplify writing flew styles for your applications :)
+## What is this for ?
+
+After coding with React Native for a good amount of time now, I realized that the most lines I type are the style ones and specifically the flex ones.
+
+I regrouped those in an tool that is easy-to-use in order to simplify your coding life.
 
 ## Installation
 ```sh
