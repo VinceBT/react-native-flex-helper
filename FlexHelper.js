@@ -10,7 +10,7 @@ import { StyleSheet } from 'react-native';
  * https://css-tricks.com/snippets/css/a-guide-to-flexbox/
  */
 
-export default FlexHelper = StyleSheet.create({
+export default StyleSheet.create({
   fill: {
     flex: 1
   },

@@ -45,5 +45,7 @@ import Flex from 'react-native-flex-helper';
  - **```relative```** : A shortcut for ```[position: 'relative'}```
  - **```absolute```** : A shortcut for ```[position: 'absolute'}```
 
+ [For explanations about main and cross axis in flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+
 ## License
 MIT Licensed
