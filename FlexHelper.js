@@ -33,8 +33,11 @@ export default StyleSheet.create({
   mainEnd: {
     justifyContent: 'flex-end'
   },
-  mainStretch: {
-    justifyContent: 'stretch'
+  mainSpaceBetween: {
+    justifyContent: 'space-between'
+  },
+  mainSpaceAround: {
+    justifyContent: 'space-around'
   },
   crossStart: {
     alignItems: 'flex-start'
@@ -45,8 +48,11 @@ export default StyleSheet.create({
   crossStart: {
     alignItems: 'flex-end'
   },
-  crossStretch: {
-    alignItems: 'stretch'
+  crossSpaceBetween: {
+    alignItems: 'space-between'
+  },
+  crossSpaceAround: {
+    alignItems: 'space-around'
   },
   relative: {
     position: 'relative'
