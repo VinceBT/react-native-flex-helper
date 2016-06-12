@@ -42,8 +42,8 @@ import Flex from 'react-native-flex-helper';
  - **```crossCenter```** : Align components at the center in the cross axis
  - **```crossEnd```** : Align components at the end in the cross axis
  - **```crossStretch```** : Stretch components in the cross axis
- - **```relative```** : A shortcut for ```[position: 'relative'}```
- - **```absolute```** : A shortcut for ```[position: 'absolute'}```
+ - **```relative```** : A shortcut for relative position
+ - **```absolute```** : A shortcut for absolute position
 
  [For explanations about main and cross axis in flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
