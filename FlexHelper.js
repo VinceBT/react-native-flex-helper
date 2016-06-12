@@ -48,11 +48,8 @@ export default StyleSheet.create({
   crossStart: {
     alignItems: 'flex-end'
   },
-  crossSpaceBetween: {
-    alignItems: 'space-between'
-  },
-  crossSpaceAround: {
-    alignItems: 'space-around'
+  crossStretch: {
+    alignItems: 'stretch'
   },
   relative: {
     position: 'relative'
