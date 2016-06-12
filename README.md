@@ -40,7 +40,8 @@ import Flex from 'react-native-flex-helper';
  - **```mainStart```** : Align components at the start in the main axis
  - **```mainCenter```** : Align components at the center in the main axis
  - **```mainEnd```** : Align components at the end in the main axis
- - **```mainStretch```** : Stretch components in the main axis
+ - **```mainSpaceBetween```** : Put spaces between components in the main axis
+ - **```mainSpaceAround```** : Put spaces around components in the main axis
  - **```crossStart```** : Align components at the start in the cross axis
  - **```crossCenter```** : Align components at the center in the cross axis
  - **```crossEnd```** : Align components at the end in the cross axis
