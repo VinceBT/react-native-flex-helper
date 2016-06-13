@@ -6,13 +6,15 @@ A simpler use for flexbox styles in React Native
 
 After coding with React Native for a good amount of time now, I realized that the most lines I type are the style ones and specifically the flex ones.
 
-I regrouped those in an tool that is easy-to-use in order to simplify your coding life.
+I regrouped those ones in an tool that is easy-to-use in order to simplify your coding life.
 
 ## Installation
+
 ```sh
 npm i -S react-native-flex-helper
 ```
 ## Basics
+
  - Import the package
 ```jsx
 const Flex = require('react-native-flex-helper');
@@ -33,6 +35,9 @@ import Flex from 'react-native-flex-helper';
 </View>
 ```
 ## Translation
+
+[Flexbox for beginners](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+
  - **```fill```** : Fills the parent View
  - **```center```** : Any child component will be centered
  - **```column```** : All components will be disposed vertically
@@ -49,7 +54,6 @@ import Flex from 'react-native-flex-helper';
  - **```relative```** : A shortcut for relative position
  - **```absolute```** : A shortcut for absolute position
 
- [For explanations about main and cross axis in flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
-
 ## License
+
 MIT Licensed
