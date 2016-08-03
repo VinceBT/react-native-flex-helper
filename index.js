@@ -1,5 +1,5 @@
 /**
- * Flex Helper
+ * index.js
  * https://github.com/VinceBT/react-native-flex-helper
  */
 
