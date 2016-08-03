@@ -3,14 +3,14 @@
  * https://github.com/VinceBT/react-native-flex-helper
  */
 
-import { StyleSheet } from 'react-native';
+const { StyleSheet } = require('react-native');
 
 /**
  * For main and cross axis explanation
  * https://css-tricks.com/snippets/css/a-guide-to-flexbox/
  */
 
-export default StyleSheet.create({
+module.exports = StyleSheet.create({
   fill: {
     flex: 1
   },

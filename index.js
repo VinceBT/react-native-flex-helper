@@ -3,6 +3,6 @@
  * https://github.com/VinceBT/react-native-flex-helper
  */
 
-import FlexHelper from './FlexHelper';
+const FlexHelper = require('./FlexHelper');
 
-export default FlexHelper;
+module.exports = FlexHelper;
