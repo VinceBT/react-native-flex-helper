@@ -1,7 +1,7 @@
 {
   "name": "react-native-flex-helper",
-  "version": "1.2.0",
-  "description": "",
+  "version": "1.2.1",
+  "description": "A simpler use for flexbox styles in React Native",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
