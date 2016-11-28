@@ -51,8 +51,17 @@ import Flex from 'react-native-flex-helper';
  - **```crossCenter```** : Align components at the center in the cross axis
  - **```crossEnd```** : Align components at the end in the cross axis
  - **```crossStretch```** : Stretch components in the cross axis
+ - **```colMain```** : Align children in the main axis in column orientation
+ - **```colCross```** : Align children in the cross axis in column orientation
+ - **```rowMain```** : Align children in the main axis in row orientation
+ - **```rowCross```** : Align children in the cross axis in row orientation
  - **```relative```** : A shortcut for relative position
  - **```absolute```** : A shortcut for absolute position
+ - **```absoluteFill```** : A shortcut for absolute position filling
+ - **```absoluteTop```** : A shortcut for absolute position filling in top part
+ - **```absoluteLeft```** : A shortcut for absolute position filling in left part
+ - **```absoluteRight```** : A shortcut for absolute position filling in right part
+ - **```absoluteBottom```** : A shortcut for absolute position filling in bottom part
 
 ## License
 
