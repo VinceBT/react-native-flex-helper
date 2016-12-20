@@ -62,6 +62,7 @@ import Flex from 'react-native-flex-helper';
  - **```absoluteLeft```** : A shortcut for absolute position filling in left part
  - **```absoluteRight```** : A shortcut for absolute position filling in right part
  - **```absoluteBottom```** : A shortcut for absolute position filling in bottom part
+ - **```overflow```** : A shortcut for overflow hidden
 
 ## License
 
