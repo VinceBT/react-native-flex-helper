@@ -1,6 +1,6 @@
 # React Native Flex Helper
 
-A simpler use for flexbox styles in React Native
+A wrapper around flexbox styles in React Native
 
 ## What is this for ?
 
@@ -17,9 +17,9 @@ npm i -S react-native-flex-helper
 
  - Import the package
 ```jsx
-const Flex = require('react-native-flex-helper');
-or
 import Flex from 'react-native-flex-helper';
+or
+const Flex = require('react-native-flex-helper');
 ```
  - Code like this
 ```jsx
@@ -41,7 +41,9 @@ import Flex from 'react-native-flex-helper';
  - **```fill```** : Fills the parent View
  - **```center```** : Any child component will be centered
  - **```column```** : All components will be disposed vertically
+ - **```columnReverse```** : All components will be disposed vertically in the reversed order
  - **```row```** : All components will be disposed vertically
+ - **```rowReverse```** : All components will be disposed vertically in the reversed order
  - **```mainStart```** : Align components at the start in the main axis
  - **```mainCenter```** : Align components at the center in the main axis
  - **```mainEnd```** : Align components at the end in the main axis
