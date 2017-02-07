@@ -18,14 +18,14 @@ const Flex = require('react-native-flex-helper');
 ```
  - Code like this
 ```jsx
-<View style={[Flex.fillCenter]}>
-  <View style={[Flex.column]}>
+<View style={Flex.fillCenter}>
+  <View style={Flex.column}>
     <View style={[Flex.row, Flex.mainCenter]}>
       <Text>Rendered in</Text>
       <Text> the x axis</Text>
       <Text> and centered</Text>
     </View>
-    <View style={[Flex.rowMain]}>
+    <View style={Flex.rowMain}>
       <Text>Renders the same</Text>
       <Text> than the example before</Text>
     </View>
