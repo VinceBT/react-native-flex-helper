@@ -45,22 +45,26 @@ const Flex = require('react-native-flex-helper');
  - **```fill```** : ```{ flex: 1 }```
  - **```center```** : ```{ alignItems: 'center', justifyContent: 'center' }```
  - **```fillCenter```** : ```{ flex: 1, alignItems: 'center', justifyContent: 'center' }```
+ 
 ####Orientation
  - **```row```** : ```{ flexDirection: 'row' }```
  - **```rowReverse```** : ```{ flexDirection: 'row-reverse' }```
  - **```column```** : ```{ flexDirection: 'column' }```
  - **```columnReverse```** : ```{ flexDirection: 'column-reverse' }```
+ 
 ####Main axis
  - **```mainStart```** : ```{ justifyContent: 'flex-start' }```
  - **```mainCenter```** : ```{ justifyContent: 'center' }```
  - **```mainEnd```** : ```{ justifyContent: 'flex-end' }```
  - **```mainSpaceBetween```** : ```{ justifyContent: 'space-between' }```
  - **```mainSpaceAround```** : ```{ justifyContent: 'space-around' }```
+ 
 ####Cross axis
  - **```crossStart```** : ```{ alignItems: 'flex-start' }```
  - **```crossCenter```** : ```{ alignItems: 'center' }```
  - **```crossEnd```** : ```{ alignItems: 'flex-end' }```
  - **```crossStretch```** : ```{ alignItems: 'stretch' }```
+ 
 ####Shorthands
  - **```rowMain```** : ```{ flexDirection: 'row', justifyContent: 'center' }```
  - **```rowCross```** : ```{ flexDirection: 'row', alignItems: 'center' }```
@@ -74,6 +78,7 @@ const Flex = require('react-native-flex-helper');
  - **```fillColMain```** : ```{ flex: 1, flexDirection: 'column', justifyContent: 'center' }```
  - **```fillColCross```** : ```{ flex: 1, flexDirection: 'column', alignItems: 'center' }```
  - **```fillColCenter```** : ```{ flex: 1, flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }```
+ 
 ####Position helpers
  - **```relative```** : ```{ position: 'relative' }```
  - **```absolute```** : ```{ position: 'absolute' }```
@@ -82,6 +87,7 @@ const Flex = require('react-native-flex-helper');
  - **```absoluteLeft```** : ```{ position: 'absolute', top: 0, left: 0, bottom: 0 }```
  - **```absoluteRight```** : ```{ position: 'absolute', top: 0, right: 0, bottom: 0 }```
  - **```absoluteBottom```** : ```{ position: 'absolute', left: 0, right: 0, bottom: 0 }```
+ 
 ####Others
  - **```overflow```** : ```{ overflow: 'hidden' }```
 
