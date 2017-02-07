@@ -1,6 +1,6 @@
 {
   "name": "react-native-flex-helper",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "A wrapper around flexbox styles in React Native",
   "main": "index.js",
   "scripts": {

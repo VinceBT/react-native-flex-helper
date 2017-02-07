@@ -1,18 +1,13 @@
 # React Native Flex Helper
 
-A wrapper around flexbox styles in React Native
-
-## What is this for ?
-
-After coding with React Native for a good amount of time now, I realized that the most lines I type are the style ones and specifically the flex ones.
-
-I regrouped those ones in an tool that is easy-to-use in order to simplify your coding life.
+A compilation of style helpers in React Native
 
 ## Installation
 
 ```sh
 npm i -S react-native-flex-helper
 ```
+
 ## Basics
 
  - Import the package
@@ -23,13 +18,21 @@ const Flex = require('react-native-flex-helper');
 ```
  - Code like this
 ```jsx
-<View style={[Flex.fill, Flex.center]}>
+<View style={[Flex.fillCenter]}>
   <View style={[Flex.column]}>
     <View style={[Flex.row, Flex.mainCenter]}>
-      <Text>Hello</Text>
+      <Text>Rendered in</Text>
+      <Text> the x axis</Text>
+      <Text> and centered</Text>
     </View>
-    <View style={[Flex.row, Flex.mainCenter]}>
-      <Text>This is an example</Text>
+    <View style={[Flex.rowMain]}>
+      <Text>Renders the same</Text>
+      <Text> than the example before</Text>
+    </View>
+    <View style={[Flex.colCenter, { backgroundColor: 'blue' }, customStyle]}>
+      <Text>Renders as a column</Text>
+      <Text>And in the center</Text>
+      <Text>With custom styles</Text>
     </View>
   </View>
 </View>
@@ -38,33 +41,49 @@ const Flex = require('react-native-flex-helper');
 
 [Flexbox for beginners](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
- - **```fill```** : Fills the parent View
- - **```center```** : Any child component will be centered
- - **```column```** : All components will be disposed vertically
- - **```columnReverse```** : All components will be disposed vertically in the reversed order
- - **```row```** : All components will be disposed vertically
- - **```rowReverse```** : All components will be disposed vertically in the reversed order
- - **```mainStart```** : Align components at the start in the main axis
- - **```mainCenter```** : Align components at the center in the main axis
- - **```mainEnd```** : Align components at the end in the main axis
- - **```mainSpaceBetween```** : Put spaces between components in the main axis
- - **```mainSpaceAround```** : Put spaces around components in the main axis
- - **```crossStart```** : Align components at the start in the cross axis
- - **```crossCenter```** : Align components at the center in the cross axis
- - **```crossEnd```** : Align components at the end in the cross axis
- - **```crossStretch```** : Stretch components in the cross axis
- - **```colMain```** : Align children in the main axis in column orientation
- - **```colCross```** : Align children in the cross axis in column orientation
- - **```rowMain```** : Align children in the main axis in row orientation
- - **```rowCross```** : Align children in the cross axis in row orientation
- - **```relative```** : A shortcut for relative position
- - **```absolute```** : A shortcut for absolute position
- - **```absoluteFill```** : A shortcut for absolute position filling
- - **```absoluteTop```** : A shortcut for absolute position filling in top part
- - **```absoluteLeft```** : A shortcut for absolute position filling in left part
- - **```absoluteRight```** : A shortcut for absolute position filling in right part
- - **```absoluteBottom```** : A shortcut for absolute position filling in bottom part
- - **```overflow```** : A shortcut for overflow hidden
+####Layout
+ - **```fill```** : ```{ flex: 1 }```
+ - **```center```** : ```{ alignItems: 'center', justifyContent: 'center' }```
+ - **```fillCenter```** : ```{ flex: 1, alignItems: 'center', justifyContent: 'center' }```
+####Orientation
+ - **```row```** : ```{ flexDirection: 'row' }```
+ - **```rowReverse```** : ```{ flexDirection: 'row-reverse' }```
+ - **```column```** : ```{ flexDirection: 'column' }```
+ - **```columnReverse```** : ```{ flexDirection: 'column-reverse' }```
+####Main axis
+ - **```mainStart```** : ```{ justifyContent: 'flex-start' }```
+ - **```mainCenter```** : ```{ justifyContent: 'center' }```
+ - **```mainEnd```** : ```{ justifyContent: 'flex-end' }```
+ - **```mainSpaceBetween```** : ```{ justifyContent: 'space-between' }```
+ - **```mainSpaceAround```** : ```{ justifyContent: 'space-around' }```
+####Cross axis
+ - **```crossStart```** : ```{ alignItems: 'flex-start' }```
+ - **```crossCenter```** : ```{ alignItems: 'center' }```
+ - **```crossEnd```** : ```{ alignItems: 'flex-end' }```
+ - **```crossStretch```** : ```{ alignItems: 'stretch' }```
+####Shorthands
+ - **```rowMain```** : ```{ flexDirection: 'row', justifyContent: 'center' }```
+ - **```rowCross```** : ```{ flexDirection: 'row', alignItems: 'center' }```
+ - **```rowCenter```** : ```{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }```
+ - **```colMain```** : ```{ flexDirection: 'column', justifyContent: 'center' }```
+ - **```colCross```** : ```{ flexDirection: 'column', alignItems: 'center' }```
+ - **```colCenter```** : ```{ flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }```
+ - **```fillRowMain```** : ```{ flex: 1, flexDirection: 'row', justifyContent: 'center' }```
+ - **```fillRowCross```** : ```{ flex: 1, flexDirection: 'row', alignItems: 'center' }```
+ - **```fillRowCenter```** : ```{ flex: 1, flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }```
+ - **```fillColMain```** : ```{ flex: 1, flexDirection: 'column', justifyContent: 'center' }```
+ - **```fillColCross```** : ```{ flex: 1, flexDirection: 'column', alignItems: 'center' }```
+ - **```fillColCenter```** : ```{ flex: 1, flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }```
+####Position helpers
+ - **```relative```** : ```{ position: 'relative' }```
+ - **```absolute```** : ```{ position: 'absolute' }```
+ - **```absoluteFill```** : ```{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0 }```
+ - **```absoluteTop```** : ```{ position: 'absolute',top: 0, left: 0, right: 0 }```
+ - **```absoluteLeft```** : ```{ position: 'absolute', top: 0, left: 0, bottom: 0 }```
+ - **```absoluteRight```** : ```{ position: 'absolute', top: 0, right: 0, bottom: 0 }```
+ - **```absoluteBottom```** : ```{ position: 'absolute', left: 0, right: 0, bottom: 0 }```
+####Others
+ - **```overflow```** : ```{ overflow: 'hidden' }```
 
 ## License
 
