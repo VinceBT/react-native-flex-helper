@@ -72,9 +72,13 @@ const Flex = require('react-native-flex-helper');
  - **```colMain```** : ```{ flexDirection: 'column', justifyContent: 'center' }```
  - **```colCross```** : ```{ flexDirection: 'column', alignItems: 'center' }```
  - **```colCenter```** : ```{ flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }```
+ - **```fillRow```** : ```{ flex: 1, flexDirection: 'row' }```
+ - **```fillRowReverse```** : ```{ flex: 1, flexDirection: 'row-reverse' }```
  - **```fillRowMain```** : ```{ flex: 1, flexDirection: 'row', justifyContent: 'center' }```
  - **```fillRowCross```** : ```{ flex: 1, flexDirection: 'row', alignItems: 'center' }```
  - **```fillRowCenter```** : ```{ flex: 1, flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }```
+ - **```fillCol```** : ```{ flex: 1, flexDirection: 'column' }```
+ - **```fillCol```** : ```{ flex: 1, flexDirection: 'column-reverse' }```
  - **```fillColMain```** : ```{ flex: 1, flexDirection: 'column', justifyContent: 'center' }```
  - **```fillColCross```** : ```{ flex: 1, flexDirection: 'column', alignItems: 'center' }```
  - **```fillColCenter```** : ```{ flex: 1, flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }```

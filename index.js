@@ -81,6 +81,14 @@ module.exports = require('react-native').StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center'
   },
+  fillRow: {
+    flex: 1,
+    flexDirection: 'row',
+  },
+  fillRowReverse: {
+    flex: 1,
+    flexDirection: 'row-reverse',
+  },
   fillRowMain: {
     flex: 1,
     flexDirection: 'row',
@@ -96,6 +104,14 @@ module.exports = require('react-native').StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center'
+  },
+  fillCol: {
+    flex: 1,
+    flexDirection: 'column'
+  },
+  fillColReverse: {
+    flex: 1,
+    flexDirection: 'column-reverse'
   },
   fillColMain: {
     flex: 1,
