@@ -3,7 +3,9 @@
  * https://github.com/VinceBT/react-native-flex-helper
  */
 
-module.exports = require('react-native').StyleSheet.create({
+var ReactNative = require('react-native');
+
+var styleSheet = ReactNative.StyleSheet.create({
   fill: {
     flex: 1
   },
@@ -196,3 +198,24 @@ module.exports = require('react-native').StyleSheet.create({
     overflow: 'hidden'
   },
 });
+
+styleSheet.shadow = function(level) {
+  if (level === 0)
+  	return {};
+  if (ReactNative.Platform.OS === 'android')
+  	return { elevation: level };
+  if (ReactNative.Platform.OS === 'ios') {
+  	return {
+  	  shadowOpacity: 0.0015 * elevation + 0.18,
+      shadowRadius: 0.54 * elevation,
+      shadowOffset: {
+        height: 0.6 * elevation,
+      },
+  	}
+  }
+  return {
+    boxShadow: `rgba(0, 0, 0, ${(0.07 + (level * 0.045)).toFixed(2)}) 0px 0px ${((level * 13.6) - 9.6).toFixed(2)}px`,
+  };
+}
+
+module.exports = styleSheet;

@@ -18,8 +18,8 @@ const Flex = require('react-native-flex-helper');
 ```
  - Code like this
 ```jsx
-<View style={Flex.fillCenter}>
-  <View style={Flex.col}>
+<View style={[Flex.fillCenter, { height: 150 }]}>
+  <View style={[Flex.col, Flex.shadow(2)]}>
     <View style={[Flex.row, Flex.mainCenter]}>
       <Text>Rendered in</Text>
       <Text> the x axis</Text>
@@ -96,8 +96,11 @@ const Flex = require('react-native-flex-helper');
  - **```absoluteBottomLeft```** : ```{ position: 'absolute', bottom: 0, left: 0 }```
  - **```absoluteBottomRight```** : ```{ position: 'absolute', bottom: 0, right: 0 }```
  
-#### Others
+#### Overflow
  - **```overflow```** : ```{ overflow: 'hidden' }```
+
+#### Shadows
+ - **```shadow(level)```** : ```Uses the correct way to display a shadow in the support```
 
 ## License
 
