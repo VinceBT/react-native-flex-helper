@@ -25,7 +25,13 @@ module.exports = require('react-native').StyleSheet.create({
   column: {
     flexDirection: 'column'
   },
+  col: {
+    flexDirection: 'column'
+  },
   columnReverse: {
+    flexDirection: 'column-reverse'
+  },
+  colReverse: {
     flexDirection: 'column-reverse'
   },
   mainStart: {

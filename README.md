@@ -49,8 +49,8 @@ const Flex = require('react-native-flex-helper');
 ####Orientation
  - **```row```** : ```{ flexDirection: 'row' }```
  - **```rowReverse```** : ```{ flexDirection: 'row-reverse' }```
- - **```column```** : ```{ flexDirection: 'column' }```
- - **```columnReverse```** : ```{ flexDirection: 'column-reverse' }```
+ - **```column```** or **```col```** : ```{ flexDirection: 'column' }```
+ - **```columnReverse```** or **```colReverse```** : ```{ flexDirection: 'column-reverse' }```
  
 ####Main axis
  - **```mainStart```** : ```{ justifyContent: 'flex-start' }```
