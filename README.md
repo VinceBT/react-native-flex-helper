@@ -87,10 +87,14 @@ const Flex = require('react-native-flex-helper');
  - **```relative```** : ```{ position: 'relative' }```
  - **```absolute```** : ```{ position: 'absolute' }```
  - **```absoluteFill```** : ```{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0 }```
- - **```absoluteTop```** : ```{ position: 'absolute',top: 0, left: 0, right: 0 }```
+ - **```absoluteTop```** : ```{ position: 'absolute', top: 0, left: 0, right: 0 }```
  - **```absoluteLeft```** : ```{ position: 'absolute', top: 0, left: 0, bottom: 0 }```
  - **```absoluteRight```** : ```{ position: 'absolute', top: 0, right: 0, bottom: 0 }```
  - **```absoluteBottom```** : ```{ position: 'absolute', left: 0, right: 0, bottom: 0 }```
+ - **```absoluteTopLeft```** : ```{ position: 'absolute', top: 0, left: 0 }```
+ - **```absoluteTopRight```** : ```{ position: 'absolute', top: 0, right: 0 }```
+ - **```absoluteBottomLeft```** : ```{ position: 'absolute', bottom: 0, left: 0 }```
+ - **```absoluteBottomRight```** : ```{ position: 'absolute', bottom: 0, right: 0 }```
  
 ####Others
  - **```overflow```** : ```{ overflow: 'hidden' }```

@@ -172,6 +172,26 @@ module.exports = require('react-native').StyleSheet.create({
     right: 0,
     bottom: 0
   },
+  absoluteTopLeft: {
+    position: 'absolute',
+    top: 0,
+    left: 0
+  },
+  absoluteTopRight: {
+    position: 'absolute',
+    top: 0,
+    right: 0
+  },
+  absoluteBottomLeft: {
+    position: 'absolute',
+    bottom: 0,
+    left: 0
+  },
+  absoluteBottomRight: {
+    position: 'absolute',
+    bottom: 0,
+    right: 0
+  },
   overflow: {
     overflow: 'hidden'
   },
