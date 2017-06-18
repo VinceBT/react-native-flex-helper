@@ -19,7 +19,7 @@ const Flex = require('react-native-flex-helper');
  - Code like this
 ```jsx
 <View style={Flex.fillCenter}>
-  <View style={Flex.column}>
+  <View style={Flex.col}>
     <View style={[Flex.row, Flex.mainCenter]}>
       <Text>Rendered in</Text>
       <Text> the x axis</Text>
@@ -41,31 +41,31 @@ const Flex = require('react-native-flex-helper');
 
 [Flexbox for beginners](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
-####Layout
+#### Layout
  - **```fill```** : ```{ flex: 1 }```
  - **```center```** : ```{ alignItems: 'center', justifyContent: 'center' }```
  - **```fillCenter```** : ```{ flex: 1, alignItems: 'center', justifyContent: 'center' }```
  
-####Orientation
+#### Orientation
  - **```row```** : ```{ flexDirection: 'row' }```
  - **```rowReverse```** : ```{ flexDirection: 'row-reverse' }```
  - **```column```** or **```col```** : ```{ flexDirection: 'column' }```
  - **```columnReverse```** or **```colReverse```** : ```{ flexDirection: 'column-reverse' }```
  
-####Main axis
+#### Main axis
  - **```mainStart```** : ```{ justifyContent: 'flex-start' }```
  - **```mainCenter```** : ```{ justifyContent: 'center' }```
  - **```mainEnd```** : ```{ justifyContent: 'flex-end' }```
  - **```mainSpaceBetween```** : ```{ justifyContent: 'space-between' }```
  - **```mainSpaceAround```** : ```{ justifyContent: 'space-around' }```
  
-####Cross axis
+#### Cross axis
  - **```crossStart```** : ```{ alignItems: 'flex-start' }```
  - **```crossCenter```** : ```{ alignItems: 'center' }```
  - **```crossEnd```** : ```{ alignItems: 'flex-end' }```
  - **```crossStretch```** : ```{ alignItems: 'stretch' }```
  
-####Shorthands
+#### Shorthands
  - **```rowMain```** : ```{ flexDirection: 'row', justifyContent: 'center' }```
  - **```rowCross```** : ```{ flexDirection: 'row', alignItems: 'center' }```
  - **```rowCenter```** : ```{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }```
@@ -83,7 +83,7 @@ const Flex = require('react-native-flex-helper');
  - **```fillColCross```** : ```{ flex: 1, flexDirection: 'column', alignItems: 'center' }```
  - **```fillColCenter```** : ```{ flex: 1, flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }```
  
-####Position helpers
+#### Position helpers
  - **```relative```** : ```{ position: 'relative' }```
  - **```absolute```** : ```{ position: 'absolute' }```
  - **```absoluteFill```** : ```{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0 }```
@@ -96,7 +96,7 @@ const Flex = require('react-native-flex-helper');
  - **```absoluteBottomLeft```** : ```{ position: 'absolute', bottom: 0, left: 0 }```
  - **```absoluteBottomRight```** : ```{ position: 'absolute', bottom: 0, right: 0 }```
  
-####Others
+#### Others
  - **```overflow```** : ```{ overflow: 'hidden' }```
 
 ## License
