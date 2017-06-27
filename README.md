@@ -37,14 +37,17 @@ const Flex = require('react-native-flex-helper');
   </View>
 </View>
 ```
-## Translation
 
-[Flexbox for beginners](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+## Quick guide to Flexbox
+
+[Flexbox tutorial](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+
+
+## Translation
 
 #### Layout
  - **```fill```** : ```{ flex: 1 }```
  - **```center```** : ```{ alignItems: 'center', justifyContent: 'center' }```
- - **```fillCenter```** : ```{ flex: 1, alignItems: 'center', justifyContent: 'center' }```
  
 #### Orientation
  - **```row```** : ```{ flexDirection: 'row' }```
@@ -72,13 +75,14 @@ const Flex = require('react-native-flex-helper');
  - **```colMain```** : ```{ flexDirection: 'column', justifyContent: 'center' }```
  - **```colCross```** : ```{ flexDirection: 'column', alignItems: 'center' }```
  - **```colCenter```** : ```{ flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }```
+ - **```fillCenter```** : ```{ flex: 1, alignItems: 'center', justifyContent: 'center' }```
  - **```fillRow```** : ```{ flex: 1, flexDirection: 'row' }```
  - **```fillRowReverse```** : ```{ flex: 1, flexDirection: 'row-reverse' }```
  - **```fillRowMain```** : ```{ flex: 1, flexDirection: 'row', justifyContent: 'center' }```
  - **```fillRowCross```** : ```{ flex: 1, flexDirection: 'row', alignItems: 'center' }```
  - **```fillRowCenter```** : ```{ flex: 1, flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }```
  - **```fillCol```** : ```{ flex: 1, flexDirection: 'column' }```
- - **```fillCol```** : ```{ flex: 1, flexDirection: 'column-reverse' }```
+ - **```fillColReverse```** : ```{ flex: 1, flexDirection: 'column-reverse' }```
  - **```fillColMain```** : ```{ flex: 1, flexDirection: 'column', justifyContent: 'center' }```
  - **```fillColCross```** : ```{ flex: 1, flexDirection: 'column', alignItems: 'center' }```
  - **```fillColCenter```** : ```{ flex: 1, flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }```
@@ -96,10 +100,9 @@ const Flex = require('react-native-flex-helper');
  - **```absoluteBottomLeft```** : ```{ position: 'absolute', bottom: 0, left: 0 }```
  - **```absoluteBottomRight```** : ```{ position: 'absolute', bottom: 0, right: 0 }```
  
-#### Overflow
+#### Additional features
  - **```overflow```** : ```{ overflow: 'hidden' }```
-
-#### Shadows
+ - **```textCenter```** : ```{ textAlign: 'center' }```
  - **```shadow(level)```** : ```Uses the correct way to display a shadow in the support```
 
 ## License

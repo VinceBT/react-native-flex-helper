@@ -197,6 +197,9 @@ var styleSheet = ReactNative.StyleSheet.create({
   overflow: {
     overflow: 'hidden'
   },
+  textCenter: {
+    textAlign: 'center'
+  }
 });
 
 styleSheet.shadow = function(level) {
@@ -216,6 +219,6 @@ styleSheet.shadow = function(level) {
   return {
     boxShadow: `rgba(0, 0, 0, ${(0.07 + (level * 0.045)).toFixed(2)}) 0px 0px ${((level * 13.6) - 9.6).toFixed(2)}px`,
   };
-}
+};
 
 module.exports = styleSheet;
