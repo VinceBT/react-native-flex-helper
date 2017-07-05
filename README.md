@@ -1,6 +1,6 @@
 # React Native Flex Helper
 
-A compilation of style helpers in React Native
+A compilation of useful style helpers and shorthands in React Native
 
 ## Installation
 
@@ -102,8 +102,11 @@ const Flex = require('react-native-flex-helper');
  
 #### Additional features
  - **```overflow```** : ```{ overflow: 'hidden' }```
+ - **```shadow(level)```** : ```Uses the correct way to display a shadow in the platform (Android, iOS, Web)```
  - **```textCenter```** : ```{ textAlign: 'center' }```
- - **```shadow(level)```** : ```Uses the correct way to display a shadow in the support```
+ - **```textJustify```** : ```{ textAlign: 'justify' }```
+ - **```textLeft```** : ```{ textAlign: 'left' }```
+ - **```textRight```** : ```{ textAlign: 'right' }```
 
 ## License
 

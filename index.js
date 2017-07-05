@@ -199,6 +199,15 @@ var styleSheet = ReactNative.StyleSheet.create({
   },
   textCenter: {
     textAlign: 'center'
+  },
+  textJustify: {
+    textAlign: 'justify'
+  },
+  textLeft: {
+    textAlign: 'left'
+  },
+  textRight: {
+    textAlign: 'right'
   }
 });
 
@@ -217,7 +226,7 @@ styleSheet.shadow = function(level) {
   	}
   }
   return {
-    boxShadow: `rgba(0, 0, 0, ${(0.07 + (level * 0.045)).toFixed(2)}) 0px 0px ${((level * 13.6) - 9.6).toFixed(2)}px`,
+    boxShadow: 'rgba(0, 0, 0, ' + (0.07 + (level * 0.045)).toFixed(2) + ') 0px 0px '+ ((level * 13.6) - 9.6).toFixed(2) + 'px',
   };
 };
 

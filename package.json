@@ -1,6 +1,6 @@
 {
   "name": "react-native-flex-helper",
-  "version": "1.3.2",
+  "version": "1.4.0",
   "description": "A compilation of style helpers in React Native",
   "main": "index.js",
   "scripts": {
