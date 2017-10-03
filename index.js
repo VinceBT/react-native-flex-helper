@@ -218,10 +218,10 @@ styleSheet.shadow = function(level) {
   	return { elevation: level };
   if (ReactNative.Platform.OS === 'ios') {
   	return {
-  	  shadowOpacity: 0.0015 * elevation + 0.18,
-      shadowRadius: 0.54 * elevation,
+  	  shadowOpacity: 0.0015 * level + 0.18,
+      shadowRadius: 0.54 * level,
       shadowOffset: {
-        height: 0.6 * elevation,
+        height: 0.6 * level,
       },
   	}
   }
