@@ -5,7 +5,7 @@
 
 var ReactNative = require('react-native');
 
-var styleSheet = ReactNative.StyleSheet.create({
+var baseStyles = {
   fill: {
     flex: 1
   },
@@ -208,26 +208,41 @@ var styleSheet = ReactNative.StyleSheet.create({
   },
   textRight: {
     textAlign: 'right'
-  }
-});
+  },
+  textReset: {
+    backgroundColor: 'transparent'
+  },
+};
 
-styleSheet.shadow = function(level) {
+var computeShadowStyle = function(level) {
   if (level === 0)
-  	return {};
+    return {};
   if (ReactNative.Platform.OS === 'android')
-  	return { elevation: level };
+    return { elevation: level };
   if (ReactNative.Platform.OS === 'ios') {
-  	return {
-  	  shadowOpacity: 0.0015 * level + 0.18,
+    return {
+      shadowOpacity: 0.0015 * level + 0.18,
       shadowRadius: 0.54 * level,
       shadowOffset: {
         height: 0.6 * level,
       },
-  	}
+    }
   }
   return {
     boxShadow: 'rgba(0, 0, 0, ' + (0.07 + (level * 0.045)).toFixed(2) + ') 0px 0px '+ ((level * 13.6) - 9.6).toFixed(2) + 'px',
   };
+}
+
+var create = function(extStyles) {
+  var styleSheet = ReactNative.StyleSheet.create({...extStyles, ...baseStyles});
+  styleSheet.shadow = computeShadowStyle;
+  return styleSheet;
 };
 
-module.exports = styleSheet;
+var FlexHelpers = create(baseStyles);
+FlexHelpers.create = create;
+
+module.exports.styles = baseStyles; // May miss computation functions
+module.exports.create = create;
+
+module.exports = FlexHelpers;
