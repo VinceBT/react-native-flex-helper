@@ -44,8 +44,8 @@ You are ready to use it !
 ```jsx
 <View style={[styles.fillCenter]}>
   <View style={[styles.col, styles.shadow(2), styles.box]}>
-    <Text style={[styles.textCenter, styles.text]>Hello</Text>
-    <Text style={[styles.textCenter, styles.text]>World!</Text>
+    <Text style={[styles.textCenter, styles.text]}>Hello</Text>
+    <Text style={[styles.textCenter, styles.text]}>World!</Text>
   </View>
 </View>
 ```
