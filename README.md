@@ -43,7 +43,7 @@ const styles = FlexHelpers.create({
 You are ready to use it !
 ```jsx
 <View style={[styles.fillCenter]}>
-  <View style={[styles.col, styles.shadow(2), styles.box]}
+  <View style={[styles.col, styles.shadow(2), styles.box]}>
     <Text style={[styles.textCenter, styles.text]>Hello</Text>
     <Text style={[styles.textCenter, styles.text]>World!</Text>
   </View>
@@ -55,7 +55,7 @@ You are ready to use it !
 You can also use FlexHelpers as a static stylesheet and merge your styles with an array (it may not work with a spread operator).
 ```jsx
 const styles = StyleSheet.create({
-  text: { color:000' },
+  text: { color: '#000' },
 });
 ...
 const HelloWorld = () => (

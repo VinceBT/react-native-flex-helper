@@ -1,21 +1,21 @@
 {
   "name": "react-native-flex-helper",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A compilation of style helpers in React Native",
   "keywords": [
     "react",
+    "native",
     "reactnative",
-    "react native",
     "react-native",
     "react-native-flex",
     "flex",
+    "box",
     "flexbox",
-    "flex box",
     "flex-box",
-    "helper",
-    "helpers",
     "style",
-    "styles"
+    "styles",
+    "helper",
+    "helpers"
   ],
   "main": "index.js",
   "scripts": {
@@ -25,7 +25,7 @@
     "type": "git",
     "url": "git+https://github.com/VinceBT/react-native-flex-helper.git"
   },
-  "author": "",
+  "author": "VinceBT",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/VinceBT/react-native-flex-helper/issues"
