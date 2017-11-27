@@ -5,37 +5,62 @@ A compilation of useful style helpers and shorthands in React Native
 ## Installation
 
 ```sh
+yarn add react-native-flex-helper
+or
 npm i -S react-native-flex-helper
 ```
 
-## Basics
+## How it works
 
- - Import the package
+```FlexHelpers.create``` uses ReactNative's ```StyleSheet.create``` to build for you a new stylesheet containing your style rules and the helper rules.
+
+Overlapping names will be overwritten by the styles helpers, be careful.
+
+## Usage
+
+Simply import the package
 ```jsx
-import Flex from 'react-native-flex-helper';
+import FlexHelpers from 'react-native-flex-helper';
 or
-const Flex = require('react-native-flex-helper');
+const FlexHelpers = require('react-native-flex-helper');
 ```
- - Code like this
+Find your stylesheet declaration, for example
 ```jsx
-<View style={[Flex.fillCenter, { height: 150 }]}>
-  <View style={[Flex.col, Flex.shadow(2)]}>
-    <View style={[Flex.row, Flex.mainCenter]}>
-      <Text>Rendered in</Text>
-      <Text> the x axis</Text>
-      <Text> and centered</Text>
-    </View>
-    <View style={Flex.rowMain}>
-      <Text>Renders the same</Text>
-      <Text> than the example before</Text>
-    </View>
-    <View style={[Flex.colCenter, { backgroundColor: 'blue' }, customStyle]}>
-      <Text>Renders as a column</Text>
-      <Text>And in the center</Text>
-      <Text>With custom styles</Text>
-    </View>
+const styles = StyleSheet.create({
+  box: { backgroundColor: 'red' },
+  text: { color: '#000' },
+});
+```
+And just replace 
+```StyleSheet.create``` with ```FlexHelpers.create```
+Like this 
+```jsx
+const styles = FlexHelpers.create({
+  box: { backgroundColor: 'red' },
+  text: { color: '#000' },
+});
+```
+You are ready to use it !
+```jsx
+<View style={[styles.fillCenter]}>
+  <View style={[styles.col, styles.shadow(2), styles.box]}
+    <Text style={[styles.textCenter, styles.text]>Hello</Text>
+    <Text style={[styles.textCenter, styles.text]>World!</Text>
   </View>
 </View>
+```
+
+### Additional (compatibility with older versions)
+
+You can also use FlexHelpers as a static stylesheet and merge your styles with an array (it may not work with a spread operator).
+```jsx
+const styles = StyleSheet.create({
+  text: { color:000' },
+});
+...
+const HelloWorld = () => (
+  <Text style={[FlexHelpers.textCenter, styles.text]}>Hello World!</Text>
+);
 ```
 
 ## Quick guide to Flexbox
@@ -107,6 +132,7 @@ const Flex = require('react-native-flex-helper');
  - **```textJustify```** : ```{ textAlign: 'justify' }```
  - **```textLeft```** : ```{ textAlign: 'left' }```
  - **```textRight```** : ```{ textAlign: 'right' }```
+ - **```textReset```** : ```{ backgroundColor: 'transparent' }``` is a fix for a common iOS issue where the backgroundColor of Text tags is inherited and need to be reset
 
 ## License
 
