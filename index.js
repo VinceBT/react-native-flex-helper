@@ -215,7 +215,7 @@ var baseStyles = {
 };
 
 var computeShadowStyle = function(level) {
-  if (level === 0)
+  if (level === null || isNaN(level) || level <= 0)
     return {};
   if (ReactNative.Platform.OS === 'android')
     return { elevation: level };
@@ -226,7 +226,7 @@ var computeShadowStyle = function(level) {
       shadowOffset: {
         height: 0.6 * level,
       },
-    }
+    };
   }
   return {
     boxShadow: 'rgba(0, 0, 0, ' + (0.07 + (level * 0.045)).toFixed(2) + ') 0px 0px '+ ((level * 13.6) - 9.6).toFixed(2) + 'px',
@@ -234,7 +234,8 @@ var computeShadowStyle = function(level) {
 }
 
 var create = function(extStyles) {
-  var styleSheet = ReactNative.StyleSheet.create({...extStyles, ...baseStyles});
+  var mergedStyles = Object.assign({}, extStyles, baseStyles);
+  var styleSheet = ReactNative.StyleSheet.create(mergedStyles);
   styleSheet.shadow = computeShadowStyle;
   return styleSheet;
 };
