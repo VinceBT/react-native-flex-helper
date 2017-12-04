@@ -132,7 +132,7 @@ const HelloWorld = () => (
  - **```textJustify```** : ```{ textAlign: 'justify' }```
  - **```textLeft```** : ```{ textAlign: 'left' }```
  - **```textRight```** : ```{ textAlign: 'right' }```
- - **```textReset```** : ```{ backgroundColor: 'transparent' }``` is a fix for a common iOS issue where the backgroundColor of Text tags is inherited and need to be reset
+ - **```backgroundReset```** : ```{ backgroundColor: 'transparent' }``` is a fix for a common iOS issue where the backgroundColor of some tags is transferred to children and need to be reset
 
 ## License
 

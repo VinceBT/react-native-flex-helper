@@ -209,7 +209,7 @@ var baseStyles = {
   textRight: {
     textAlign: 'right'
   },
-  textReset: {
+  backgroundReset: {
     backgroundColor: 'transparent'
   },
 };
