@@ -3,91 +3,91 @@
  * https://github.com/VinceBT/react-native-flex-helper
  */
 
-var ReactNative = require('react-native');
+import { StyleSheet, Platform } from 'react-native';
 
-var baseStyles = {
+const flexHelperStyles = {
   fill: {
-    flex: 1
+    flex: 1,
   },
   center: {
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   fillCenter: {
     flex: 1,
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   row: {
-    flexDirection: 'row'
+    flexDirection: 'row',
   },
   rowReverse: {
-    flexDirection: 'row-reverse'
+    flexDirection: 'row-reverse',
   },
   column: {
-    flexDirection: 'column'
+    flexDirection: 'column',
   },
   col: {
-    flexDirection: 'column'
+    flexDirection: 'column',
   },
   columnReverse: {
-    flexDirection: 'column-reverse'
+    flexDirection: 'column-reverse',
   },
   colReverse: {
-    flexDirection: 'column-reverse'
+    flexDirection: 'column-reverse',
   },
   mainStart: {
-    justifyContent: 'flex-start'
+    justifyContent: 'flex-start',
   },
   mainCenter: {
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   mainEnd: {
-    justifyContent: 'flex-end'
+    justifyContent: 'flex-end',
   },
   mainSpaceBetween: {
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
   mainSpaceAround: {
-    justifyContent: 'space-around'
+    justifyContent: 'space-around',
   },
   crossStart: {
-    alignItems: 'flex-start'
+    alignItems: 'flex-start',
   },
   crossCenter: {
-    alignItems: 'center'
+    alignItems: 'center',
   },
   crossEnd: {
-    alignItems: 'flex-end'
+    alignItems: 'flex-end',
   },
   crossStretch: {
-    alignItems: 'stretch'
+    alignItems: 'stretch',
   },
   rowMain: {
     flexDirection: 'row',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   rowCross: {
     flexDirection: 'row',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   rowCenter: {
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   colMain: {
     flexDirection: 'column',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   colCross: {
     flexDirection: 'column',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   colCenter: {
     flexDirection: 'column',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   fillRow: {
     flex: 1,
@@ -100,126 +100,126 @@ var baseStyles = {
   fillRowMain: {
     flex: 1,
     flexDirection: 'row',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   fillRowCross: {
     flex: 1,
     flexDirection: 'row',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   fillRowCenter: {
     flex: 1,
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   fillCol: {
     flex: 1,
-    flexDirection: 'column'
+    flexDirection: 'column',
   },
   fillColReverse: {
     flex: 1,
-    flexDirection: 'column-reverse'
+    flexDirection: 'column-reverse',
   },
   fillColMain: {
     flex: 1,
     flexDirection: 'column',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   fillColCross: {
     flex: 1,
     flexDirection: 'column',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   fillColCenter: {
     flex: 1,
     flexDirection: 'column',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   relative: {
-    position: 'relative'
+    position: 'relative',
   },
   absolute: {
-    position: 'absolute'
+    position: 'absolute',
   },
   absoluteFill: {
     position: 'absolute',
     top: 0,
     left: 0,
     right: 0,
-    bottom: 0
+    bottom: 0,
   },
   absoluteTop: {
     position: 'absolute',
     top: 0,
     left: 0,
-    right: 0
+    right: 0,
   },
   absoluteLeft: {
     position: 'absolute',
     top: 0,
     left: 0,
-    bottom: 0
+    bottom: 0,
   },
   absoluteRight: {
     position: 'absolute',
     top: 0,
     right: 0,
-    bottom: 0
+    bottom: 0,
   },
   absoluteBottom: {
     position: 'absolute',
     left: 0,
     right: 0,
-    bottom: 0
+    bottom: 0,
   },
   absoluteTopLeft: {
     position: 'absolute',
     top: 0,
-    left: 0
+    left: 0,
   },
   absoluteTopRight: {
     position: 'absolute',
     top: 0,
-    right: 0
+    right: 0,
   },
   absoluteBottomLeft: {
     position: 'absolute',
     bottom: 0,
-    left: 0
+    left: 0,
   },
   absoluteBottomRight: {
     position: 'absolute',
     bottom: 0,
-    right: 0
+    right: 0,
   },
   overflow: {
-    overflow: 'hidden'
+    overflow: 'hidden',
   },
   textCenter: {
-    textAlign: 'center'
+    textAlign: 'center',
   },
   textJustify: {
-    textAlign: 'justify'
+    textAlign: 'justify',
   },
   textLeft: {
-    textAlign: 'left'
+    textAlign: 'left',
   },
   textRight: {
-    textAlign: 'right'
+    textAlign: 'right',
   },
   backgroundReset: {
-    backgroundColor: 'transparent'
+    backgroundColor: 'transparent',
   },
 };
 
-var computeShadowStyle = function(level) {
+const computeShadowStyle = (level) => {
   if (level === null || isNaN(level) || level <= 0)
     return {};
-  if (ReactNative.Platform.OS === 'android')
+  if (Platform.OS === 'android')
     return { elevation: level };
-  if (ReactNative.Platform.OS === 'ios') {
+  if (Platform.OS === 'ios') {
     return {
       shadowOpacity: 0.0015 * level + 0.18,
       shadowRadius: 0.54 * level,
@@ -231,19 +231,19 @@ var computeShadowStyle = function(level) {
   return {
     boxShadow: 'rgba(0, 0, 0, ' + (0.07 + (level * 0.045)).toFixed(2) + ') 0px 0px '+ ((level * 13.6) - 9.6).toFixed(2) + 'px',
   };
-}
+};
 
-var create = function(extStyles) {
-  var mergedStyles = Object.assign({}, extStyles, baseStyles);
-  var styleSheet = ReactNative.StyleSheet.create(mergedStyles);
+const createStyleSheet = function(extStyles) {
+  const mergedStyles = Object.assign({}, extStyles, flexHelperStyles);
+  const styleSheet = StyleSheet.create(mergedStyles);
   styleSheet.shadow = computeShadowStyle;
   return styleSheet;
 };
 
-var FlexHelpers = create(baseStyles);
-FlexHelpers.create = create;
+const FlexHelpers = createStyleSheet(flexHelperStyles);
+FlexHelpers.create = createStyleSheet;
 
-module.exports.styles = baseStyles; // May miss computation functions
-module.exports.create = create;
+export const styles = flexHelperStyles; // May miss computation functions
+export const create = createStyleSheet;
 
-module.exports = FlexHelpers;
+export default FlexHelpers;
