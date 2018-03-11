@@ -128,6 +128,7 @@ const HelloWorld = () => (
 #### Additional features
  - **```overflow```** : ```{ overflow: 'hidden' }```
  - **```shadow(level)```** : ```Uses the correct way to display a shadow in the platform (Android, iOS, Web)```
+ - **```circle(size)```** : ```Sets width and height to the mentioned size and borderRadius to half of the size```
  - **```textCenter```** : ```{ textAlign: 'center' }```
  - **```textJustify```** : ```{ textAlign: 'justify' }```
  - **```textLeft```** : ```{ textAlign: 'left' }```

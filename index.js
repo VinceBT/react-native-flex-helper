@@ -233,10 +233,21 @@ const computeShadowStyle = (level) => {
   };
 };
 
+const computeCircleStyle = (size) => {
+  if (size === null || isNaN(size) || size <= 0)
+    return {};
+  return {
+    width: size,
+    height: size,
+    borderRadius: size /2,
+  };
+};
+
 const createStyleSheet = function(extStyles) {
   const mergedStyles = Object.assign({}, extStyles, flexHelperStyles);
   const styleSheet = StyleSheet.create(mergedStyles);
   styleSheet.shadow = computeShadowStyle;
+  styleSheet.circle = computeCircleStyle;
   return styleSheet;
 };
 
