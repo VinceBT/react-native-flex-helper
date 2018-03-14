@@ -5,6 +5,8 @@
 
 import { StyleSheet, Platform } from 'react-native';
 
+const emptyStyle = {};
+
 const flexHelperStyles = {
   fill: {
     flex: 1,
@@ -215,31 +217,47 @@ const flexHelperStyles = {
 };
 
 const computeShadowStyle = (level) => {
-  if (level === null || isNaN(level) || level <= 0)
-    return {};
+  if (typeof level === 'undefined' || isNaN(level))
+    return emptyStyle;
+  const safeLevel = Number(level);
+  if (safeLevel <= 0)
+    return emptyStyle;
   if (Platform.OS === 'android')
-    return { elevation: level };
+    return { elevation: safeLevel };
   if (Platform.OS === 'ios') {
     return {
-      shadowOpacity: 0.0015 * level + 0.18,
-      shadowRadius: 0.54 * level,
+      shadowOpacity: 0.0015 * safeLevel + 0.18,
+      shadowRadius: 0.54 * safeLevel,
       shadowOffset: {
-        height: 0.6 * level,
+        height: 0.6 * safeLevel,
       },
     };
   }
   return {
-    boxShadow: 'rgba(0, 0, 0, ' + (0.07 + (level * 0.045)).toFixed(2) + ') 0px 0px '+ ((level * 13.6) - 9.6).toFixed(2) + 'px',
+    boxShadow: 'rgba(0, 0, 0, ' + (0.07 + (safeLevel * 0.045)).toFixed(2) + ') 0px 0px '+ ((safeLevel * 13.6) - 9.6).toFixed(2) + 'px',
   };
 };
 
-const computeCircleStyle = (size) => {
-  if (size === null || isNaN(size) || size <= 0)
-    return {};
+const computeCircleStyle = (sizeOrWidth, height) => {
+  if (typeof sizeOrWidth === 'undefined' || isNaN(sizeOrWidth))
+    return emptyStyle;
+  const safeSizeOrWidth = Number(sizeOrWidth);
+  if (safeSizeOrWidth < 0)
+    return emptyStyle;
+  if (typeof height !== 'undefined' && !isNaN(height)) {
+    const safeHeight = Number(height);
+    if (safeHeight < 0)
+      return emptyStyle;
+    return {
+      width: safeSizeOrWidth,
+      height: safeHeight,
+      borderRadius: Math.min(safeSizeOrWidth, safeHeight) /2,
+    };
+  }
   return {
-    width: size,
-    height: size,
-    borderRadius: size /2,
+    width: safeSizeOrWidth,
+    height: safeSizeOrWidth,
+    borderRadius: safeSizeOrWidth /2,
   };
 };
 
